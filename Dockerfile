@@ -3,7 +3,9 @@ FROM python:3.10
 RUN git clone https://github.com/Eng-Elias/CrewAI-Visualizer.git
 RUN cd CrewAI-Visualizer
 RUN npm install
-RUN wget https://github.com/zhengr/SmartSearch/releases/download/0.1.0/ui.zip && unzip ui.zip
+
+RUN python -m venv venv
+RUN source venv/bin/activate
 
 WORKDIR /CrewAI-Visualizer
 
