@@ -10,7 +10,7 @@ RUN echo "deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backport
 RUN echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware" >> /etc/apt/sources.list
 RUN echo "deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware" >> /etc/apt/sources.list
 
-RUN curl -qL https://www.npmjs.com/install.sh | sh
+RUN curl -fsSL https://deb.nodesource.com/setup_21.x | bash - && apt-get install -y nodejs
 
 RUN git clone https://github.com/Eng-Elias/CrewAI-Visualizer.git
 RUN cd CrewAI-Visualizer
