@@ -1,5 +1,7 @@
 FROM python:3.10
 
+RUN curl -fsSL https://deb.nodesource.com/setup_19.x | bash - && apt-get install -y nodejs
+
 RUN git clone https://github.com/Eng-Elias/CrewAI-Visualizer.git
 RUN cd CrewAI-Visualizer
 RUN npm install
