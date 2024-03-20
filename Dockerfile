@@ -2,7 +2,7 @@ FROM python:3.10
 
 RUN curl -fsSL https://deb.nodesource.com/setup_21.x | bash - && apt-get install -y nodejs
 
-RUN git clone https://github.com/Eng-Elias/CrewAI-Visualizer.git
+RUN git clone https://github.com/zhengr/CrewAI-Visualizer.git
 RUN cd CrewAI-Visualizer
 
 WORKDIR /CrewAI-Visualizer
