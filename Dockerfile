@@ -4,12 +4,13 @@ RUN curl -fsSL https://deb.nodesource.com/setup_21.x | bash - && apt-get install
 
 RUN git clone https://github.com/Eng-Elias/CrewAI-Visualizer.git
 RUN cd CrewAI-Visualizer
+
+WORKDIR /CrewAI-Visualizer
+
 RUN npm install
 
 RUN python -m venv venv
 RUN source venv/bin/activate
-
-WORKDIR /CrewAI-Visualizer
 
 COPY ./entrypoint.sh /CrewAI-Visualizer/entrypoint.sh
 
