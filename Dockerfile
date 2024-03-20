@@ -11,6 +11,7 @@ RUN echo "deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-secu
 RUN echo "deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware" >> /etc/apt/sources.list
 
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && apt-get install -y nodejs
+RUN apt-get install -y npm
 
 RUN git clone https://github.com/Eng-Elias/CrewAI-Visualizer.git
 RUN cd CrewAI-Visualizer
