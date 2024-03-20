@@ -1,7 +1,8 @@
 FROM python:3.10
 
-RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
-RUN sed -i 's/security.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list
+RUN cat /dev/null > /etc/apt/sources.list
+RUN echo "deb http://mirrors.tencentyun.com/debian/ bookworm main non-free contrib" >> /etc/apt/sources.list
+RUN echo "deb-src http://mirrors.tencentyun.com/debian/ bookworm main non-free contrib" >> /etc/apt/sources.list
 
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && apt-get install -y nodejs
 
