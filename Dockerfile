@@ -9,9 +9,6 @@ WORKDIR /CrewAI-Visualizer
 
 RUN npm install
 
-RUN python3 -m venv venv
-RUN source venv/bin/activate
-
 COPY ./entrypoint.sh /CrewAI-Visualizer/entrypoint.sh
 
 COPY ./requirements.txt /CrewAI-Visualizer/requirements.txt
