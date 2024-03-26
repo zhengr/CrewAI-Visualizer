@@ -22,4 +22,4 @@ COPY . .
 RUN chmod +x /CrewAI-Visualizer/entrypoint.sh
 ENTRYPOINT ["sh", "/CrewAI-Visualizer/entrypoint.sh"]
 
-EXPOSE 8081
+EXPOSE 3000
