@@ -32,7 +32,7 @@ Deprecated==1.2.14
 deprecation==2.1.0
 distro==1.9.0
 docstring-parser==0.15
-duckduckgo_search==4.4.3
+duckduckgo_search==5.1.0
 embedchain==0.1.97
 fastapi==0.110.0
 feedparser==6.0.10
